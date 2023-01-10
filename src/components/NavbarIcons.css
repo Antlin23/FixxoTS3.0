@@ -1,0 +1,39 @@
+
+    .main-menu-icons{
+        display: flex;
+    }
+    
+    .main-menu .main-menu-icons a,
+    .main-menu .main-menu-icons button{
+        color: var(--color-black);
+        background-color: var(--color-white);
+        border-radius: 50%;
+        box-shadow:  0 0 10px  rgb(186, 186, 186);
+        margin: 0 0.6rem;
+        transition: all var(--transition-time-150) ease-in-out;
+        height: 40px;
+        text-decoration: none;
+    }
+        .main-menu .main-menu-icons a:hover,
+        .main-menu .main-menu-icons button:hover{
+            background-color: var(--color-dark-blue-1);
+            color: var(--color-white);
+        }
+        .main-menu .main-menu-icons a i,
+        .main-menu .main-menu-icons button{
+            width: 40px;
+            padding: 0.6rem;
+        }
+        .main-menu .main-menu-icons .active,
+        .main-menu .main-menu-icons button .active{
+            background-color: var(--color-dark-blue-1);
+            color: var(--color-white);
+        }
+
+        /* buttton */
+        .btn-menu-icon{
+            border: none;
+        }
+        .btn-menu-icon i{
+            padding-left: 3px;
+        }

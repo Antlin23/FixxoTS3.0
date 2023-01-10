@@ -1,0 +1,11 @@
+.flashsales{
+    margin-top: 5rem;
+}
+
+
+@media (min-width: 992px) {
+    .flashsales{
+        display: flex;
+        justify-content: center;
+    }
+}

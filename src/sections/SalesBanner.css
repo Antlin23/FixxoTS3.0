@@ -1,0 +1,28 @@
+.sales-banner{
+    background-color: #7E7F80;
+    color: white;
+    margin-top: 4rem;
+    padding: 4rem;
+}
+    .sales-banner h1{
+        font-size: 45px;
+        font-weight: var(--font-weight-bold);
+    }
+    .sales-banner p{
+        font-size: 20px;
+        font-weight: var(--font-weight-bold);
+        margin: 1.5rem;
+    }
+    .sales-banner button {
+        background-color: white;
+        color: black;
+    }
+    .sales-banner button:hover {
+        background-color: var(--color-theme);
+        color: white;
+    }
+    .sales-banner .theme-button::before,
+    .sales-banner .theme-button::after
+    {
+        border-color: black;
+    }

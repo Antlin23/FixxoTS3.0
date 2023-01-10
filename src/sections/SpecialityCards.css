@@ -1,0 +1,79 @@
+.speciality-container{
+    display: flex;
+    justify-content: center;
+}
+.speciality{
+    background-color: #F5F5F5;
+    color: #23262A;
+    max-width: 1690px;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+    .speciality .cards{
+        padding-bottom: 5rem;
+    }
+    .speciality h1{
+        font-weight: var(--font-weight-bold);     
+        font-size: var(--font-size-20);   
+        padding-top: 3rem;
+    }
+    .speciality h2{
+        font-weight: var(--font-weight-semi-bold);     
+        font-size: var(--font-size-20);   
+    }
+    .speciality .card{
+        background-color: white;
+        border: none;
+        text-align: left;
+        width: 250px;
+        height: 250px;
+        font-size: var(--font-size-20);   
+        margin: 1rem auto;
+        padding: 2rem;
+        padding-top: 5rem;
+        border-radius: 0;
+    }
+        .speciality .card-img{
+        background-color: #BBBBBB;
+        border: none;
+        width: 250px;
+        height: 250px;
+        margin: 2rem auto;
+        border-radius: 0;
+        display: none;
+    }
+    .speciality .card a{
+        color: #23262A;
+        font-size: var(--font-size-16);  
+        font-weight: var(--font-weight-semi-bold);      
+        margin-top: 1rem;
+        transition: all 150ms ease-in-out;
+    }
+        .speciality .card a:hover{
+            color: var(--color-theme);
+        }
+
+@media (min-width: 778px) {
+    .speciality .card-img{
+        display: block;
+        margin: 0;
+    }
+    .speciality .card{
+        margin: 0;
+    }
+    .speciality .card-section {
+        margin-top: 2rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .speciality .cards{
+        display: flex;
+        justify-content: center;
+    }
+    .speciality .card-section{
+        margin: 0 1rem;
+        margin-top: 1rem;
+    }
+}
+    

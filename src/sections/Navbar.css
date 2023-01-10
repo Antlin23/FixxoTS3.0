@@ -1,0 +1,31 @@
+ .main-menu{
+    display: grid;
+    justify-content: space-between;
+    grid-template-areas: 
+            "logo icons"
+            "links links"
+    ;
+    padding: 1.2rem 0;
+}
+    .main-menu .main-menu-logo{
+        grid-area: logo;
+    }
+    .main-menu .main-menu-icons{
+        grid-area: icons;
+    }
+    .main-menu .main-menu-nav{
+        grid-area: links;
+    }
+
+    .main-menu .main-menu-icons button{
+        border: none;
+    }
+
+@media (min-width: 992px) {
+    .main-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.2rem 0;
+    }
+}

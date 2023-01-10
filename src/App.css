@@ -1,0 +1,91 @@
+:root{
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-gray-1: #E6E6E6;
+  --color-gray-2: #F5F5F5;
+  --color-gray-3: #CDCED0;
+  --color-gray-4: #616365;
+  --color-gray-5: #F8F8F8;
+  --color-gray-6: #BBBBBB;
+  --color-theme: #FF7373;
+  --color-dark-blue-1: #222529;
+  --color-dark-blue-2: #23262A;
+  --font-family-poppins: poppins;
+  --font-weight-extra-bold: 800;
+  --font-weight-bold: 700;
+  --font-weight-semi-bold: 600;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  --font-size-13: 0.813rem;
+  --font-size-14: 0.875rem;
+  --font-size-16: 1rem;
+  --font-size-18: 1.125rem;
+  --font-size-20: 1.25rem;
+  --font-size-35: 2.2rem;
+  --font-size-45: 2.81rem;
+  --font-size-65: 4rem;
+  --transition-time-150: 150ms;
+}
+
+/* GENERAL STYLING */
+body{
+  font-family: var(--font-family-poppins);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-16);
+  color: var(--color-dark-blue-1);
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/* HR */
+hr{
+  margin-top: 5rem;
+  border-top: 2px var(--color-gray-4) solid;
+}
+
+/* Theme color background */
+.bg-theme{
+  background-color: var(--color-theme);
+}
+/* button */
+.theme-button{
+  background-color: var(--color-theme);
+  border: none;
+  color: var(--color-white);
+  font-weight: var(--font-weight-semi-bold);
+  width: 12rem;
+  height: 3.7rem;
+  margin-top: 1.3rem;
+  position: relative;
+  transition: all var(--transition-time-150) ease-in-out;
+}
+  .theme-button:hover{
+      background-color: var(--color-dark-blue-1);
+      color: var(--color-theme);
+  }
+
+  /* THE 2 WHITE BORDERS IN BUTTON */
+  .theme-button::before,
+  .theme-button::after
+  {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 20px;
+  }
+
+  .theme-button::before{
+      left: 0;
+      top: 0;
+      border-left: 2px solid var(--color-white);
+      border-top: 2px solid var(--color-white);
+      margin: 0.7rem;
+  }
+  .theme-button::after{
+      right: 0;
+      bottom: 0;
+      border-right: 2px solid var(--color-white);
+      border-bottom: 2px solid var(--color-white);
+      margin: 0.7rem;
+  }

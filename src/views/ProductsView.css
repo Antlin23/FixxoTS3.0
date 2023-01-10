@@ -1,0 +1,30 @@
+.all-products-system{
+    display: flex;
+    justify-content: center;
+}
+    .all-products-section{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+        margin-top: 2rem;
+    }
+
+
+
+@media (min-width: 576px) {
+    .all-products-section{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .all-products-section{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    .all-products-section{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

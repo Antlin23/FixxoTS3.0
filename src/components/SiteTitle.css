@@ -1,0 +1,13 @@
+.site-title{
+    margin-top: 1.5rem;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+.site-title a{
+    text-decoration: none;
+    color: #23262A;
+    transition: 150ms ease-in-out;
+}
+    .site-title a:hover{
+        color: #FF7373;
+    }

@@ -1,0 +1,64 @@
+
+.shoppingcart {
+    width: 100% !important;
+}
+
+    .shoppingcart .shoppingcart-item {
+        margin: 20px 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+            /* item image */
+            .shoppingcart .shoppingcart-item .item-image img{
+                height: 65px;
+                width: 65px;
+                margin-right: 20px;
+            }
+        .shoppingcart .shoppingcart-item .item-info{
+            text-align: left;
+        }
+        /* buttons and quantity */
+            .shoppingcart .shoppingcart-item .item-info .item-info-quantity{
+                border-radius: 20px;
+            }
+            /* right button || add button */
+                .shoppingcart .shoppingcart-item .item-info .item-info-quantity .right-btn{
+                    border: 1px solid #dedede;
+                    border-radius: 0 8px 8px 0;
+                }
+
+                /* left button || increment button */
+                .shoppingcart .shoppingcart-item .item-info .item-info-quantity .left-btn{
+                    border: 1px solid #dedede;
+                    border-radius: 8px 0 0 8px;
+                }
+
+            /* item name */
+            .shoppingcart .shoppingcart-item .item-info .item-info-name{
+                font-weight: 500;
+                margin-bottom: 8px;
+                
+            }
+            /* item quantity */
+            .shoppingcart .shoppingcart-item .item-info span{
+                padding: 2px 18px;
+                border-top: 1px solid #dedede;
+                border-bottom: 1px solid #dedede;
+            }
+
+            /* trash can || remove button*/
+            .shoppingcart .shoppingcart-item .item-price button{
+                border: none;
+                background-color: transparent;
+                margin-top: 5px;
+                transition: 150ms all ease-in-out;
+            }
+                .shoppingcart .shoppingcart-item .item-price button:hover{
+                    color: var(--color-theme);
+                }
+
+@media (min-width: 1200px) {
+    .shoppingcart {
+        width: 500px !important;
+    }
+}

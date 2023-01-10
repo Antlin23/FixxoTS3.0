@@ -1,0 +1,13 @@
+.main-menu .main-menu-logo{
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-35);
+    text-decoration: none;
+    color: var(--color-dark-blue-1);
+    margin-left: 2rem;
+}
+
+@media (min-width: 576px) {
+    .main-menu .main-menu-logo{
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,15 @@
+footer .social-media{
+    margin-top: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+footer .social-media a{
+    color: black;
+}
+    footer .social-media i{
+        margin: 0 0.4rem;
+        font-size: 1.2rem;
+        transition: all 150ms ease-in-out;
+    }
+        footer .social-media i:hover{
+            color: var(--color-theme);
+        }

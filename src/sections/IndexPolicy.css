@@ -1,0 +1,47 @@
+/* index-policy */
+.index-policy{
+    margin-top: 3rem;
+}
+    .index-policy .index-policy-section{
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    .index-policy h1{
+        color: var(--color-dark-blue-1);
+        font-size: var(--font-size-20);
+        font-weight: var(--font-weight-bold);
+        margin-bottom: 1rem;
+    }
+    .index-policy p{
+        color: var(--color-gray-4);
+        font-size: var(--font-size-16);
+        
+    }
+    .index-policy .index-policy-part{
+        margin: 0 1rem;
+        max-width: 18rem;
+    }
+
+    /* icons index-policy*/
+        .index-policy-part i{
+            color: var(--color-black);
+            background-color: var(--color-white);
+            border-radius: 50%;
+            padding-top: 1rem;
+            padding-left: 0.1rem;
+            box-shadow:  0 0 10px  rgb(186, 186, 186);
+            transition: all var(--transition-time-150) ease-in-out;
+            width: 62px;
+            height: 60px;
+            font-size: 30px;
+            margin-bottom: 1.5rem;
+        }
+
+
+@media (min-width: 768px) {
+    .index-policy{
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,96 @@
+.contact-form .container{
+    max-width: 1110px;
+}
+
+.contact-form .submitted-message-sucess{
+    background-color: rgb(99, 218, 178);
+    text-align: center;
+    color: rgb(11, 66, 47);
+    padding: 35px;
+    border-radius: 13px;
+    margin: 20px;
+}
+.contact-form .submitted-message-failed{
+    background-color: #ff7c7c;
+    text-align: center;
+    color: #540404;
+    padding: 35px;
+    border-radius: 13px;
+    margin: 20px;
+}
+    .contact-form #submittedMessage h1{
+       font-size: 25px;
+       text-align: center;
+       margin: 0;
+    }
+    .contact-form #submittedMessage p{
+        margin: 0;
+        padding: 0;
+     }
+.contact-form form{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+    /* forms title */
+    .contact-form h1{
+        font-size: var(--font-size-18);
+        font-weight: var(--font-weight-bold);
+        margin: 3rem 0 2rem 0; 
+        text-align: left;
+    }
+    .contact-form form input{
+        width: 100%;
+        padding: 18px 20px; 
+        border: rgb(167, 167, 167) 1px solid;
+    }
+
+    .contact-form form .invalidInput{
+        border-color: #FF7373 !important;
+        outline: 1px solid #FF7373;
+    }
+    .contact-form form .errorMessage{
+        margin-top: 5px;
+        color: #FF7373;
+        font-size: 0.8em;
+        text-align: left;
+    }
+
+    /* textarea */
+    .contact-form form .textarea{
+        grid-column: 1 / -1;
+    }
+    .contact-form form .textarea textarea{
+        border: rgb(167, 167, 167) 1px solid;
+        padding: 18px 20px;
+        height: 140px;
+        grid-column: 1 / -1;
+        width: 100%;
+        resize: none;
+    }
+    /* button */
+    .contact-form form .contact-button{
+        height: 3rem;
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+        .contact-form form .contact-button button{
+            width: 100%;
+            height: 100%;
+            margin-top: 0;
+        }
+        .contact-form form button::before,
+        .contact-form form button::after{
+            border: none;
+        }
+
+/* responsivity */
+@media (min-width: 1200px){
+    .contact-form form{
+        grid-template-columns: 1fr 1fr;
+    }
+    .contact-form form .contact-button{
+        width: 210px;
+
+    }
+}

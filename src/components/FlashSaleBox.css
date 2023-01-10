@@ -1,0 +1,39 @@
+.flashsales .flashsales-box{
+    background-color: var(--color-gray-6);
+    margin: 0 1rem;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+}
+    .flashsales .flashsales-box h1{
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size-45);
+        color: var(--color-white);
+    }
+
+    /* button */
+    .flashsales .flashsales-box button{
+        background-color: var(--color-white);
+        color: var(--color-dark-blue-1);
+        border-color: var(--color-dark-blue-1);
+        transition: all 150ms ease-in-out;
+    }
+        .flashsales .flashsales-box button:hover{
+            background-color: var(--color-theme);
+            color: var(--color-white);
+            border-color: var(--color-dark-blue-1);
+        }
+        .flashsales .flashsales-box button:before,
+        .flashsales .flashsales-box button:after{
+            border-color: var(--color-dark-blue-1);
+        }
+
+@media (min-width: 992px) {
+    .flashsales .flashsales-box{
+        width: 60rem;
+        margin-bottom: 0;
+    }
+}
