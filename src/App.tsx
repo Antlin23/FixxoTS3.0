@@ -12,14 +12,42 @@ import NotFoundView from './views/NotFoundView';
 import ProductDetailsView from './views/ProductDetailsView';
 
 // Contexts
-import { ProductContext } from './contexts/ProductContexts'
+import ProductProvider, { ProductContext, ProductContextType, useProductContext } from './contexts/ProductContexts'
 import { ShoppingCartProvider } from './contexts/ShoppingCartContext'
 import { IProduct } from './models/ProductModel';
 import UserProvider from './contexts/UserContext';
 
 
-
 const App: React.FC = () => { 
+
+  
+
+  return (
+    <BrowserRouter>
+      <ProductProvider>
+      <UserProvider>
+      <ShoppingCartProvider>
+          <Routes>
+            <Route path='/' element={<HomeView />} />
+            <Route path='/categories' element={<CategoriesView />} />
+            <Route path='/products' element={<ProductsView />} />
+            <Route path='/products/:name' element={<ProductDetailsView />} />
+            <Route path='/contacts' element={<ContactsView />} />
+            <Route path="/search" element={<SearchView />} />
+            <Route path="/compare" element={<CompareView />} />
+            <Route path="/wishlist" element={<WishListView />} />
+            <Route path='*' element={<NotFoundView />} />
+          </Routes>
+      </ShoppingCartProvider>
+      </UserProvider>
+      </ProductProvider>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+
+// ********************* CODE BELOW, NOT IN USE  ****************************
 
   // const [allProducts, setAllProducts] = useState<IProduct[]>([])
 
@@ -53,26 +81,3 @@ const App: React.FC = () => {
   //     fetchThreeProducts()
 
   // }, [])
-
-  return (
-    <BrowserRouter>
-      <UserProvider>
-      <ShoppingCartProvider>
-          <Routes>
-            <Route path='/' element={<HomeView />} />
-            <Route path='/categories' element={<CategoriesView />} />
-            <Route path='/products' element={<ProductsView />} />
-            <Route path='/products/:name' element={<ProductDetailsView />} />
-            <Route path='/contacts' element={<ContactsView />} />
-            <Route path="/search" element={<SearchView />} />
-            <Route path="/compare" element={<CompareView />} />
-            <Route path="/wishlist" element={<WishListView />} />
-            <Route path='*' element={<NotFoundView />} />
-          </Routes>
-      </ShoppingCartProvider>
-      </UserProvider>
-    </BrowserRouter>
-  );
-}
-
-export default App;

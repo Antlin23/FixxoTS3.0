@@ -9,8 +9,7 @@ const CategoriesView: React.FC = () => {
   return (
     <>
     <Navbar />
-      <CreateForm />
-      <UserList />
+        Coming Soon | Fixxo.
     <Footer />
     </>
   )

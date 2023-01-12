@@ -1,14 +1,22 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect,useState } from 'react'
 import Navbar from '../sections/Navbar'
 import Footer from '../sections/Footer'
 import './ProductsView.css'
 import SiteTitle from '../components/SiteTitle'
 import ProductCard from '../components/ProductCard'
-import { ProductContext } from '../contexts/ProductContexts'
+import { ProductContext, ProductContextType, useProductContext } from '../contexts/ProductContexts'
 import { IProduct, IProductContext } from '../models/ProductModel'
+import AllProducts from '../sections/AllProducts'
+
 
 const ProductsView: React.FC = () => {
   document.title = "Products | Fixxo."
+
+  const {products, getAll} = useProductContext() as ProductContextType
+
+  useEffect(() => {
+    getAll()
+  }, [])
 
   return (
     <>
@@ -23,13 +31,8 @@ const ProductsView: React.FC = () => {
       {/* site title /breadcrumb */}
       <SiteTitle activePage="Products"/>
 
-      <div className='all-products-system'>
-        <div className="all-products-section">
-            {/* {
-              products.allProducts.map((product: IProduct) => <ProductCard key={product.articleNumber} item={product} />) 
-            }  */}
-        </div>
-      </div>
+          <AllProducts items={products} />
+
       
       {/* footer */}
       <Footer />

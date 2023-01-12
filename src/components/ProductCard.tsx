@@ -3,6 +3,7 @@ import './ProductCard.css'
 import { NavLink } from 'react-router-dom';
 import { IShoppingCartContext, useShoppingCartContext } from '../contexts/ShoppingCartContext';
 import { IProduct } from '../models/ProductModel';
+import fixxoClothes from '../images/fixxoClothes.jpg'
 
 interface Props{
     item: IProduct
@@ -17,7 +18,7 @@ const ProductCard:React.FC<Props> = ({item}) => {
         
         {/* image part of card */}
         <div className="card">
-        <img src={item.imageName} alt={item.name} />
+        <img src={fixxoClothes} alt={item.imageName} />
             {/* quick view button */}
             <NavLink to={`/products/${item.name.replace(/ /gi, "-").toLowerCase()}`} className='quick-view'>QUICK VIEW</NavLink>
             {/* <!-- icons --> */}

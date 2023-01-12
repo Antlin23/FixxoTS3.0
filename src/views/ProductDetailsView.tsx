@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import Footer from '../sections/Footer'
@@ -6,11 +6,19 @@ import Navbar from '../sections/Navbar'
 import './ProductDetailsView.css'
 import SiteTitle from '../components/SiteTitle'
 import ProductCard from '../components/ProductCard'
-import { ProductContext } from '../contexts/ProductContexts'
+import { ProductContext, ProductContextType, useProductContext } from '../contexts/ProductContexts'
 import { IProduct, IProductContext, IProducts } from '../models/ProductModel'
+import _FourProducts from '../sections/_FourProducts'
 
 
 const ProductDetailsView: React.FC = () => {
+
+
+  const {featured, getFeatured} = useProductContext() as ProductContextType
+
+  useEffect(() => {
+    getFeatured(4)
+  }, [])
 
   const params = useParams()
 
@@ -149,13 +157,7 @@ const ProductDetailsView: React.FC = () => {
         <div className='label'>
           Related Products
         </div> 
-        <div className='product-card-container'>
-        <div className='product-cards'>
-        {/* {
-          products.fourProducts.map((product: IProduct) => <ProductCard key={product.articleNumber} item={product} />) 
-        }  */}
-        </div>
-        </div>
+          <_FourProducts items={featured}/>
       </div>
 
     

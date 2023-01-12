@@ -34,7 +34,7 @@ const HomeView: React.FC = () => {
     <SpecialityCards />
     <FlashSale />
     <SalesBanner />
-    {/* <TopProducts /> */}
+    <TopProducts items={featured}/>
     <hr className="container" />
     <IndexPolicy />
     <Footer /> 

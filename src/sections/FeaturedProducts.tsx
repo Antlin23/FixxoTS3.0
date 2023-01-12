@@ -24,13 +24,13 @@ const FeaturedProducts: React.FC<Props> = ({title, items = []}) => {
         </div>
       </div>
 
-      {/* <div className='featured-products-system'>
+      <div className='featured-products-system'>
         <div className="featured-product-section">
             {
               items.map((product: IProduct) => <ProductCard key={product.articleNumber} item={product} />) 
             } 
         </div>
-      </div> */}
+      </div>
       
     </section>
     </>

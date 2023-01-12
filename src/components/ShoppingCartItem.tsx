@@ -1,6 +1,7 @@
 import React from 'react'
 import { IShoppingCartContext, useShoppingCartContext } from '../contexts/ShoppingCartContext'
 import { IShoppingCartProduct } from '../models/ProductModel'
+import fixxoClothes from '../images/fixxoClothes.jpg'
 
 interface Props{
     item: IShoppingCartProduct
@@ -13,7 +14,7 @@ const ShoppingCartItem:React.FC<Props> = ({item}) => {
     <div className='shoppingcart-item'>
         <div className='d-flex'>
             <div className='item-image'>
-                <img src={item.product.imageName} alt={item.product.name}/>
+                <img src={fixxoClothes} alt={item.product.name}/>
             </div> 
             <div className='item-info'>
                 <div className='item-info-name'> {item.product.name} </div>
